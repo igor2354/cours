@@ -972,6 +972,10 @@ h2 {
     .card-main-screen__rating {
       margin-bottom: 15px; } }
 
+@media (max-width: 500px) {
+  .card-main-screen__button {
+    max-width: 100%; } }
+
 .courses {
   position: relative; }
   .courses::before {
