@@ -93,7 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 
 		window.addEventListener("scroll", function (e) {
-			console.log(window.pageYOffset);
 			if (window.pageYOffset > 0) {
 				elHeder.classList.add("scrolled");
 			} else {
