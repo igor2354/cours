@@ -52,36 +52,36 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 
-	// let mainMenu = document.querySelector(".main-nav ul");
-	// let menu = document.querySelector("#menu");
+	let mainMenu = document.querySelector(".main-nav ul");
+	let menu = document.querySelector("#menu");
 
-	// if (mainMenu != null && menu != null) {
-	// 	menu.append(mainMenu.cloneNode(true));
-	// }
+	if (mainMenu != null && menu != null) {
+		menu.append(mainMenu.cloneNode(true));
+	}
 
-	// let mmenu = new Mmenu("#menu", {
-	// 	navbar: {
-	// 		title: "Меню",
-	// 	},
-	// });
+	let mmenu = new Mmenu("#menu", {
+		navbar: {
+			title: "Меню",
+		},
+	});
 
-	// let mmenuApi = mmenu.API;
+	let mmenuApi = mmenu.API;
 
-	// mmenuApi.bind("open:start", function () {
-	// 	document.querySelector("html").classList.add("lock");
-	// });
+	mmenuApi.bind("open:start", function () {
+		document.querySelector("html").classList.add("lock");
+	});
 
-	// mmenuApi.bind("close:finish", function () {
-	// 	document.querySelector("html").classList.remove("lock");
-	// });
+	mmenuApi.bind("close:finish", function () {
+		document.querySelector("html").classList.remove("lock");
+	});
 
-	// document.addEventListener("click", function (e) {
-	// 	let element = e.target;
+	document.addEventListener("click", function (e) {
+		let element = e.target;
 
-	// 	if (element.closest(".main-burger")) {
-	// 		mmenuApi.open();
-	// 	}
-	// });
+		if (element.closest(".main-burger")) {
+			mmenuApi.open();
+		}
+	});
 
 	let elHeder = document.querySelector(".header");
 
