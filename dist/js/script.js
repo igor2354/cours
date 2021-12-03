@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			let loopActive = slider.querySelectorAll(".courses-sldier__slide").length > 5 ? true : false;
 
 			let coursSldier = new Swiper(slider, {
-				slidesPerView: 1,
+				slidesPerView: 2,
 				watchOverflow: true,
 				spaceBetween: 10,
 				loop: loopActive,
@@ -43,10 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
 						spaceBetween: 10,
 					},
 
-					450: {
-						slidesPerView: 2,
-						spaceBetween: 10,
-					},
+					// 450: {
+					// 	slidesPerView: 2,
+					// 	spaceBetween: 10,
+					// },
 				},
 			});
 		});
