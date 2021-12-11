@@ -5,6 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./css/mmenu.css" />
 		<link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="./css/lightgallery-bundle.min.css">
+		<link rel="stylesheet" href="./css/lg-thumbnail.css">
+		<link rel="stylesheet" href="./css/lg-fullscreen.css">
+		<link rel="stylesheet" href="./css/lg-transitions.css">
+		<link rel="stylesheet" href="./css/nouislider.min.css" />
 		<link rel="stylesheet" href="./css/style.css" />
 		<title>Document</title>
 	</head>
@@ -144,6 +149,109 @@
 								<span></span>
 								<span></span>
 								<span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="header__search-panel search-panel">
+					<div class="search-panel__scroll">
+						<div class="search-panel__wrap">
+							<div class="search-panel__top">
+								<div class="search-panel__title title-h2">Поиск</div>
+
+								<div class="search-panel__filter-title">
+									<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+										<path d="M13.3969 1.05417e-06H0.602992C0.377342 -0.000415362 0.170473 0.122566 0.067323 0.318419C-0.0372498 0.51691 -0.0188962 0.755933 0.114701 0.937212L4.80184 7.37887C4.8034 7.38109 4.80511 7.38317 4.80668 7.38539C4.97698 7.6097 5.06903 7.88134 5.0696 8.16062V13.4124C5.0686 13.568 5.13121 13.7174 5.2436 13.8277C5.356 13.9381 5.50881 14 5.66816 14C5.74925 14 5.82935 13.9842 5.90419 13.9539L8.538 12.9741C8.77404 12.9039 8.93068 12.6866 8.93068 12.425V8.16062C8.93111 7.88148 9.02331 7.6097 9.19347 7.38539C9.19503 7.38317 9.19674 7.38109 9.19831 7.37887L13.8853 0.936934C14.0189 0.755794 14.0372 0.51691 13.9327 0.318419C13.8295 0.122566 13.6227 -0.000415362 13.3969 1.05417e-06ZM8.60615 6.9644C8.34437 7.31099 8.2028 7.73004 8.20195 8.16062V12.3386L5.79805 13.2328V8.16062C5.7972 7.73004 5.65564 7.31099 5.39371 6.9644L0.843296 0.710682H13.1567L8.60615 6.9644Z" fill="white" />
+										<path d="M13.3926 0.387571C9.24016 0.382667 0.905995 0.375803 0.788571 0.387571C-0.268999 0.549209 4.82824 6.74836 5.15143 7.26252C5.47461 7.77667 5.43054 13.5793 5.54806 13.638C5.64208 13.6851 7.5851 12.8937 8.54485 12.4922C8.56444 11.1897 8.59186 8.48474 8.54485 8.08517C8.49784 7.68559 11.6004 3.38432 13.1576 1.28362L13.3926 0.387571Z" fill="white" />
+									</svg>
+
+									<span>Фильтры</span>
+								</div>
+							</div>
+
+							<div class="search-panel__middle" hidden>
+								<div class="search-panel__middle-wrap">
+									<div class="search-panel__filter filter-search">
+										<div class="filter-search__name">По отделениям</div>
+
+										<div class="filter-search__wrap" hidden>
+											<ul class="filter-search__list">
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">Кондитерское</a></li>
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">Пекарня</a></li>
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">Поварское</a></li>
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">Технолог</a></li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="search-panel__filter filter-search">
+										<div class="filter-search__name">По уровню сложности</div>
+
+										<div class="filter-search__wrap" hidden>
+											<ul class="filter-search__list">
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">Легкий</a></li>
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">Средний</a></li>
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">Сложный</a></li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="search-panel__filter filter-search">
+										<div class="filter-search__name">По цене</div>
+
+										<div class="filter-search__wrap" hidden>
+											<div class="filter-search__range filter-search-range">
+												<div class="filter-search-range__slider">
+													<div class="filter-search-range__slider-min">0</div>
+													<div class="filter-search-range__slider-max">35000</div>
+												</div>
+
+												<input type="text" class="filter-search-range__input" data-min-value="0" data-max-value="35000" data-step="1" />
+											</div>
+										</div>
+									</div>
+
+									<div class="search-panel__filter filter-search">
+										<div class="filter-search__name">По новизне</div>
+
+										<div class="filter-search__wrap" hidden>
+											<ul class="filter-search__list">
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">За неделю</a></li>
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">За месяц</a></li>
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">За пол года</a></li>
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">За год</a></li>
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">За всё время</a></li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="search-panel__filter filter-search">
+										<div class="filter-search__name">По популярности</div>
+
+										<div class="filter-search__wrap" hidden>
+											<div class="filter-search__range filter-search-range">
+												<div class="filter-search-range__slider">
+													<div class="filter-search-range__slider-min">0</div>
+													<div class="filter-search-range__slider-max">5</div>
+												</div>
+
+												<input type="text" class="filter-search-range__input" data-min-value="0" data-max-value="5" data-step="0.1" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="search-panel__bottom">
+								<div class="search-panel__wrap-input">
+									<button type="submit" class="search-panel__submit">
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M11.45 12.8473C10.2728 13.789 8.77961 14.352 7.15488 14.352C3.3545 14.352 0.273682 11.2712 0.273682 7.47085C0.273682 3.67048 3.3545 0.589661 7.15488 0.589661C10.9553 0.589661 14.0361 3.67048 14.0361 7.47085C14.0361 9.09559 13.473 10.5888 12.5313 11.766L16.8704 16.1051C17.169 16.4037 17.169 16.8878 16.8704 17.1864C16.5719 17.485 16.0878 17.485 15.7892 17.1864L11.45 12.8473ZM12.5069 7.47085C12.5069 10.4267 10.1107 12.8229 7.15488 12.8229C4.19903 12.8229 1.80284 10.4267 1.80284 7.47085C1.80284 4.51501 4.19903 2.11881 7.15488 2.11881C10.1107 2.11881 12.5069 4.51501 12.5069 7.47085Z" fill="#2B384A" />
+										</svg>
+									</button>
+									<input type="text" placeholder="Курсы" />
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1934,6 +2042,10 @@ integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="ano
 <script src="./js/mmenu.polyfills.js"></script>
 <script src="./js/mmenu.js"></script>
 <script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/nouislider.js"></script>
+<script src="./js/lightgallery.min.js"></script>
+<script src="./js/lg-thumbnail.min.js"></script>
+<script src="./js/lg-fullscreen.min.js"></script>
 <script src="./js/script.js"></script>
 </body>
 
