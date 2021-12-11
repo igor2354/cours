@@ -1674,9 +1674,25 @@ h2 {
       height: 16px;
       background: url("../img/icon-product-course-date.svg") no-repeat; }
   .info-product__buy {
+    position: relative;
     margin-right: 30px;
     max-width: 210px;
     width: 100%; }
+    .info-product__buy::before {
+      opacity: 0;
+      padding: inherit;
+      content: attr(data-price);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      font-size: inherit;
+      text-align: center; }
+    .info-product__buy:hover span {
+      opacity: 0; }
+    .info-product__buy:hover::before {
+      opacity: 1; }
   .info-product__fav {
     margin-right: 30px; }
   .info-product__bottom {
