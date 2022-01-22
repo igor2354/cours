@@ -1,0 +1,572 @@
+.main-screen {
+	&__wrap {
+		padding: 50px 0 40px 0;
+	}
+
+	&__slider {
+	}
+}
+
+.main-slider {
+	overflow: initial;
+	padding: 0 10%;
+	&__wrap {
+	}
+
+	&__slide {
+		max-width: 1160px;
+		height: initial;
+		&:not(.swiper-slide-active):not(.swiper-slide-duplicate-active) {
+			transform: scale(0.85);
+
+			.card-main-screen {
+				&__image {
+					&::before {
+						backdrop-filter: blur(0px);
+					}
+				}
+
+				&__group {
+					opacity: 0;
+					visibility: 0;
+				}
+			}
+		}
+		transition: all 0.3s ease;
+	}
+
+	&__card {
+		height: 100%;
+	}
+}
+
+.card-main-screen {
+	position: relative;
+	padding: 150px 80px 80px 80px;
+	border-radius: 60px;
+	overflow: hidden;
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 60px;
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 60px;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to top, rgba(0, 72, 176, 0.4) 0%, rgba(154, 195, 255, 0) 100%);
+			backdrop-filter: blur(9px);
+			transition: all 0.3s ease;
+			border-radius: 60px;
+		}
+	}
+
+	&__group {
+		position: relative;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		opacity: 1;
+		visibility: visible;
+		transition: all 0.3s ease;
+		z-index: 2;
+	}
+
+	&__rating {
+		margin-bottom: 70px;
+	}
+
+	&__title {
+		margin-bottom: 10px;
+		color: #fff;
+	}
+
+	&__text {
+		flex-grow: 1;
+		margin-bottom: 50px;
+		max-width: 575px;
+		font-size: 18px;
+		line-height: 135%;
+		letter-spacing: -0.03em;
+		color: #ffffff;
+	}
+
+	&__button {
+	}
+}
+
+@media (max-width: 1300px) {
+	.card-main-screen {
+		padding: 50px;
+
+		&__text {
+			@include adaptiv-font(18, 12);
+		}
+	}
+}
+
+@media (max-width: 1170px) {
+	.main-screen {
+		&__wrap {
+			padding: 20px 0;
+		}
+	}
+
+	.card-main-screen {
+		&__rating {
+			margin-bottom: 30px;
+		}
+
+		&__text {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.card-main-screen {
+		padding: 15px;
+		border-radius: 25px;
+
+		&__image {
+			border-radius: 25px;
+			& img {
+				border-radius: 25px;
+			}
+			&::before {
+				border-radius: 25px;
+			}
+		}
+
+		&__rating {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.card-main-screen {
+		&__button {
+			max-width: 100%;
+		}
+	}
+}
+
+.courses {
+	position: relative;
+	&::before {
+		pointer-events: none;
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 15vw;
+		background: linear-gradient(to right, #ffffff 25.75%, rgba(255, 255, 255, 0.75) 62.66%, rgba(255, 255, 255, 0) 100%);
+		z-index: 5;
+	}
+
+	&::after {
+		pointer-events: none;
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 15vw;
+		background: linear-gradient(to left, #ffffff 25.75%, rgba(255, 255, 255, 0.75) 62.66%, rgba(255, 255, 255, 0) 100%);
+		z-index: 5;
+	}
+	&__wrap {
+		padding: 40px 0;
+	}
+
+	&__title {
+		margin-bottom: 30px;
+	}
+
+	&__slider {
+	}
+}
+
+.courses-sldier {
+	position: relative;
+	&__container {
+		overflow: initial;
+	}
+
+	&__wrap {
+	}
+
+	&__slide {
+		max-width: 290px;
+		height: initial;
+	}
+
+	&__card {
+		height: 100%;
+	}
+
+	&__prev {
+		position: absolute;
+		top: 45%;
+		left: -20px;
+		transform: translate(0, -50%);
+		z-index: 6;
+	}
+
+	&__next {
+		position: absolute;
+		top: 45%;
+		right: -85px;
+		transform: translate(0, -50%);
+		z-index: 6;
+	}
+}
+
+.card-courses {
+	width: 100%;
+	&__group {
+		position: relative;
+
+		margin-bottom: 15px;
+		min-height: 375px;
+
+		display: flex;
+		flex-direction: column;
+
+		border-radius: 12px;
+		overflow: hidden;
+	}
+
+	&__group-info {
+		flex-grow: 1;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding: 25px 30px 30px 30px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(180deg, rgba(22, 34, 50, 0.2) 0%, #162232 91.67%);
+			opacity: 0.75;
+			z-index: 2;
+		}
+		z-index: 2;
+	}
+
+	&__group-fornt {
+		flex-grow: 1;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		z-index: 3;
+	}
+
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__group-add {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+	}
+
+	&__fav {
+		margin-right: 10px;
+	}
+
+	&__basket {
+	}
+
+	&__rating {
+		padding-bottom: 20px;
+		margin-bottom: 25px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+		& .rating__value {
+			font-size: 40px;
+			margin-bottom: 5px;
+		}
+	}
+
+	&__author {
+		position: relative;
+		margin-bottom: 10px;
+		padding-left: 23px;
+		font-weight: 600;
+		line-height: 120%;
+		letter-spacing: -0.03em;
+		color: #ffffff;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%);
+			width: 17px;
+			height: 18px;
+			background: url("../img/icon-author-card-course.svg") no-repeat;
+		}
+	}
+
+	&__group-time {
+		margin-bottom: 30px;
+	}
+
+	&__time {
+		position: relative;
+		margin-bottom: 10px;
+		padding-left: 23px;
+		font-weight: 600;
+		line-height: 120%;
+		letter-spacing: -0.03em;
+		color: #ffffff;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%);
+			width: 17px;
+			height: 17px;
+			background: url("../img/icon-time-card-course.svg") no-repeat;
+		}
+	}
+
+	&__time-progress {
+		position: relative;
+		max-width: 120px;
+		width: 100%;
+		height: 5px;
+		background: rgba(206, 237, 255, 0.25);
+		border-radius: 4px;
+		& span {
+			position: absolute;
+			top: 1px;
+			left: 0px;
+			height: 3px;
+			border-radius: 3px;
+			background: #26b1ff;
+		}
+	}
+
+	&__button {
+		max-width: 130px;
+	}
+
+	&__name {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 120%;
+		letter-spacing: -0.03em;
+		color: #2b384a;
+	}
+}
+
+.fav-card {
+	position: relative;
+	width: 34px;
+	height: 34px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: url("../img/icon-card-add-bg.svg") no-repeat;
+	& svg {
+		& path {
+			transition: all 0.3s ease;
+		}
+	}
+
+	&.--add {
+		& svg {
+			& path {
+				fill: var(--main-color-text);
+			}
+		}
+	}
+
+	&:hover {
+		& svg {
+			& path {
+				fill: var(--main-color-text);
+			}
+		}
+	}
+}
+
+.basket-card {
+	position: relative;
+	width: 34px;
+	height: 34px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: url("../img/icon-card-add-bg.svg") no-repeat;
+	& svg {
+		& path {
+			transition: all 0.3s ease;
+		}
+	}
+
+	&.--add {
+		& svg {
+			& path {
+				fill: var(--main-color-text);
+			}
+		}
+	}
+
+	&:hover {
+		& svg {
+			& path {
+				fill: var(--main-color-text);
+			}
+		}
+	}
+}
+
+@media (min-width: 1170px) {
+	.card-courses {
+		&__group-info {
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease;
+		}
+
+		&:hover {
+			& .card-courses__group-info {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}
+
+@media (max-width: 1600px) {
+	.courses {
+		&::before {
+			width: 5vw;
+		}
+
+		&::after {
+			width: 5vw;
+		}
+	}
+}
+
+@media (max-width: 1450px) {
+	.courses-sldier {
+		&__next {
+			right: -20px;
+		}
+	}
+}
+
+@media (max-width: 1300px) {
+	.courses {
+		&::before {
+			content: none;
+		}
+
+		&::after {
+			content: none;
+		}
+	}
+
+	.card-courses {
+		&__rating {
+			& .rating__value {
+				@include adaptiv-font(40, 26);
+			}
+		}
+
+		&__name {
+			@include adaptiv-font(18, 14);
+		}
+	}
+}
+
+@media (max-width: 1170px) {
+	.courses {
+		&__wrap {
+			padding: 20px 0;
+		}
+
+		&__title {
+			margin-bottom: 20px;
+		}
+	}
+
+	.courses-sldier {
+		&__container {
+			overflow: hidden;
+		}
+
+		&__slide {
+			max-width: initial;
+		}
+
+		// &__prev {
+		// 	top: 54%;
+		// }
+
+		// &__next {
+		// 	top: 54%;
+		// }
+	}
+
+	.card-courses {
+		&__group-info {
+			padding: 15px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.card-courses {
+		&__group {
+			min-height: 325px;
+		}
+
+		&__group-info {
+			padding: 7px;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.card-courses {
+		&__group {
+			min-height: 290px;
+		}
+	}
+}

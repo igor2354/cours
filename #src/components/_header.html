@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/mmenu.css" />
+		<link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="./css/lightgallery-bundle.min.css">
+		<link rel="stylesheet" href="./css/lg-thumbnail.css">
+		<link rel="stylesheet" href="./css/lg-fullscreen.css">
+		<link rel="stylesheet" href="./css/lg-transitions.css">
+		<link rel="stylesheet" href="./css/nouislider.min.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>Document</title>
+	</head>
+
+	<body>
+		<div class="wrapper" id="page">
+			<!-- HEADER -->
+
+			<header class="header">
+				<div class="container-big">
+					<div class="header__wrap">
+						<div class="header__logo main-logo">
+							<a href="#">
+								<img src="./img/logo.svg" alt="" />
+							</a>
+						</div>
+
+						@@include("_main-menu.html")
+
+						<div class="header__group">
+							<div class="header__basket main-basket">
+								<div class="main-basket__price">
+									<span>12.000 ₽</span>
+								</div>
+
+								<a href="#" class="main-basket__cart">
+									<svg xmlns="http://www.w3.org/2000/svg" width="15" height="18" viewBox="0 0 15 18" fill="none">
+										<path d="M14.6176 15.1969C14.6176 15.5683 14.3146 15.8694 13.9409 15.8694H13.2641V16.5418C13.2641 16.9132 12.9612 17.2142 12.5874 17.2142C12.2136 17.2142 11.9106 16.9132 11.9106 16.5418V15.8694H11.2339C10.8601 15.8694 10.5572 15.5683 10.5572 15.1969C10.5572 14.8256 10.8601 14.5245 11.2339 14.5245H11.9106V13.8521C11.9106 13.4807 12.2136 13.1796 12.5874 13.1796C12.9612 13.1796 13.2641 13.4807 13.2641 13.8521V14.5245H13.9409C14.3146 14.5245 14.6176 14.8256 14.6176 15.1969ZM14.6176 4.70702V11.1624C14.6176 11.5337 14.3146 11.8348 13.9409 11.8348C13.5671 11.8348 13.2641 11.5337 13.2641 11.1624V5.37945H11.9106V7.39674C11.9106 7.76812 11.6077 8.06917 11.2339 8.06917C10.8601 8.06917 10.5572 7.76812 10.5572 7.39674V5.37945H4.06045V7.39674C4.06045 7.76812 3.75747 8.06917 3.38371 8.06917C3.00994 8.06917 2.70697 7.76812 2.70697 7.39674V5.37945H1.35348V15.8694H8.52694C8.90071 15.8694 9.20368 16.1704 9.20368 16.5418C9.20368 16.9132 8.90071 17.2142 8.52694 17.2142H0.676741C0.302977 17.2142 0 16.9132 0 16.5418V4.70702C0 4.33563 0.302977 4.03459 0.676741 4.03459H2.73898C3.00781 1.7659 4.95453 0 7.30881 0C9.66309 0 11.6098 1.7659 11.8786 4.03459H13.9409C14.3146 4.03459 14.6176 4.33563 14.6176 4.70702ZM10.5118 4.03459C10.2533 2.51002 8.91549 1.34486 7.30881 1.34486C5.70212 1.34486 4.36434 2.51002 4.10582 4.03459H10.5118Z" fill="#2B384A" />
+									</svg>
+									<span class="main-basket__value">3</span>
+								</a>
+							</div>
+
+							<div class="header__search main-search">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M11.45 12.8473C10.2728 13.789 8.77961 14.352 7.15488 14.352C3.3545 14.352 0.273682 11.2712 0.273682 7.47085C0.273682 3.67048 3.3545 0.589661 7.15488 0.589661C10.9553 0.589661 14.0361 3.67048 14.0361 7.47085C14.0361 9.09559 13.473 10.5888 12.5313 11.766L16.8704 16.1051C17.169 16.4037 17.169 16.8878 16.8704 17.1864C16.5719 17.485 16.0878 17.485 15.7892 17.1864L11.45 12.8473ZM12.5069 7.47085C12.5069 10.4267 10.1107 12.8229 7.15488 12.8229C4.19903 12.8229 1.80284 10.4267 1.80284 7.47085C1.80284 4.51501 4.19903 2.11881 7.15488 2.11881C10.1107 2.11881 12.5069 4.51501 12.5069 7.47085Z" fill="#2B384A" />
+								</svg>
+								<span>Поиск</span>
+							</div>
+
+							<a href="#" class="header__fav main-fav">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.1905 18.8856C10.4145 19.0819 10.702 19.1899 11.0002 19.1899C11.2982 19.1899 11.5858 19.0819 11.8097 18.886C12.6578 18.1443 13.4748 17.448 14.1958 16.8337L14.1961 16.8334C16.3058 15.0355 18.1277 13.4828 19.3954 11.953C20.8127 10.243 21.4726 8.62154 21.4726 6.85018C21.4726 5.12917 20.8827 3.54142 19.8112 2.37921C18.727 1.20326 17.2391 0.555603 15.6217 0.555603C14.4126 0.555603 13.3054 0.937838 12.3308 1.6916C11.8388 2.07208 11.3931 2.53773 11.0002 3.08088C10.6074 2.53773 10.1616 2.07208 9.6697 1.6916C8.6951 0.937838 7.58787 0.555603 6.37884 0.555603C4.76122 0.555603 3.2735 1.20326 2.18928 2.37921C1.11784 3.54142 0.52771 5.12917 0.52771 6.85018C0.52771 8.62154 1.18783 10.243 2.60507 11.9532C3.8729 13.4829 5.69507 15.0358 7.80519 16.834L7.80887 16.8372C8.52859 17.4505 9.34436 18.1458 10.1905 18.8856Z" fill="#2B384A" />
+								</svg>
+							</a>
+
+							<a href="#" class="header__account main-account">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+									<path d="M8.82295 0.25C6.00719 0.25 3.70544 2.55174 3.70544 5.3675C3.70544 8.18326 6.00719 10.485 8.82295 10.485C11.6387 10.485 13.9404 8.18326 13.9404 5.3675C13.9404 2.55174 11.6387 0.25 8.82295 0.25Z" fill="#2B384A" />
+									<path d="M17.6053 14.5746C17.4712 14.2393 17.2924 13.9265 17.0913 13.636C16.0633 12.1163 14.4767 11.1107 12.6889 10.8649C12.4655 10.8426 12.2197 10.8872 12.0409 11.0213C11.1023 11.7141 9.98496 12.0716 8.82288 12.0716C7.6608 12.0716 6.54346 11.7141 5.60488 11.0213C5.42608 10.8872 5.18026 10.8202 4.95681 10.8649C3.16904 11.1107 1.56006 12.1163 0.554446 13.636C0.353323 13.9265 0.174529 14.2617 0.0404758 14.5746C-0.0265508 14.7087 -0.00422286 14.8651 0.0628037 14.9992C0.241598 15.312 0.465049 15.6249 0.666171 15.8931C0.979019 16.3177 1.31424 16.6975 1.69415 17.0551C2.007 17.3679 2.36455 17.6585 2.72214 17.949C4.48754 19.2675 6.61053 19.9602 8.80055 19.9602C10.9906 19.9602 13.1136 19.2674 14.879 17.949C15.2365 17.6808 15.5941 17.3679 15.9069 17.0551C16.2645 16.6975 16.622 16.3176 16.9349 15.8931C17.1584 15.6025 17.3596 15.312 17.5383 14.9992C17.65 14.8651 17.6723 14.7086 17.6053 14.5746Z" fill="#2B384A" />
+								</svg>
+							</a>
+
+							<div class="header__burger main-burger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="header__search-panel search-panel">
+					<div class="search-panel__scroll">
+						<div class="search-panel__wrap">
+							<div class="search-panel__top">
+								<div class="search-panel__title title-h2">Поиск</div>
+
+								<div class="search-panel__filter-title">
+									<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+										<path d="M13.3969 1.05417e-06H0.602992C0.377342 -0.000415362 0.170473 0.122566 0.067323 0.318419C-0.0372498 0.51691 -0.0188962 0.755933 0.114701 0.937212L4.80184 7.37887C4.8034 7.38109 4.80511 7.38317 4.80668 7.38539C4.97698 7.6097 5.06903 7.88134 5.0696 8.16062V13.4124C5.0686 13.568 5.13121 13.7174 5.2436 13.8277C5.356 13.9381 5.50881 14 5.66816 14C5.74925 14 5.82935 13.9842 5.90419 13.9539L8.538 12.9741C8.77404 12.9039 8.93068 12.6866 8.93068 12.425V8.16062C8.93111 7.88148 9.02331 7.6097 9.19347 7.38539C9.19503 7.38317 9.19674 7.38109 9.19831 7.37887L13.8853 0.936934C14.0189 0.755794 14.0372 0.51691 13.9327 0.318419C13.8295 0.122566 13.6227 -0.000415362 13.3969 1.05417e-06ZM8.60615 6.9644C8.34437 7.31099 8.2028 7.73004 8.20195 8.16062V12.3386L5.79805 13.2328V8.16062C5.7972 7.73004 5.65564 7.31099 5.39371 6.9644L0.843296 0.710682H13.1567L8.60615 6.9644Z" fill="white" />
+										<path d="M13.3926 0.387571C9.24016 0.382667 0.905995 0.375803 0.788571 0.387571C-0.268999 0.549209 4.82824 6.74836 5.15143 7.26252C5.47461 7.77667 5.43054 13.5793 5.54806 13.638C5.64208 13.6851 7.5851 12.8937 8.54485 12.4922C8.56444 11.1897 8.59186 8.48474 8.54485 8.08517C8.49784 7.68559 11.6004 3.38432 13.1576 1.28362L13.3926 0.387571Z" fill="white" />
+									</svg>
+
+									<span>Фильтры</span>
+								</div>
+							</div>
+
+							<div class="search-panel__middle" hidden>
+								<div class="search-panel__middle-wrap">
+									<div class="search-panel__filter filter-search">
+										<div class="filter-search__name">По отделениям</div>
+
+										<div class="filter-search__wrap" hidden>
+											<ul class="filter-search__list">
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">Кондитерское</a></li>
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">Пекарня</a></li>
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">Поварское</a></li>
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">Технолог</a></li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="search-panel__filter filter-search">
+										<div class="filter-search__name">По уровню сложности</div>
+
+										<div class="filter-search__wrap" hidden>
+											<ul class="filter-search__list">
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">Легкий</a></li>
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">Средний</a></li>
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">Сложный</a></li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="search-panel__filter filter-search">
+										<div class="filter-search__name">По цене</div>
+
+										<div class="filter-search__wrap" hidden>
+											<div class="filter-search__range filter-search-range">
+												<div class="filter-search-range__slider">
+													<div class="filter-search-range__slider-min">0</div>
+													<div class="filter-search-range__slider-max">35000</div>
+												</div>
+
+												<input type="text" class="filter-search-range__input" data-min-value="0" data-max-value="35000" data-step="1" />
+											</div>
+										</div>
+									</div>
+
+									<div class="search-panel__filter filter-search">
+										<div class="filter-search__name">По новизне</div>
+
+										<div class="filter-search__wrap" hidden>
+											<ul class="filter-search__list">
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">За неделю</a></li>
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">За месяц</a></li>
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">За пол года</a></li>
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">За год</a></li>
+												<li class="filter-search__item"><a href="#" class="filter-search__link main-btn --small">За всё время</a></li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="search-panel__filter filter-search">
+										<div class="filter-search__name">По популярности</div>
+
+										<div class="filter-search__wrap" hidden>
+											<div class="filter-search__range filter-search-range">
+												<div class="filter-search-range__slider">
+													<div class="filter-search-range__slider-min">0</div>
+													<div class="filter-search-range__slider-max">5</div>
+												</div>
+
+												<input type="text" class="filter-search-range__input" data-min-value="0" data-max-value="5" data-step="0.1" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="search-panel__bottom">
+								<div class="search-panel__wrap-input">
+									<button type="submit" class="search-panel__submit">
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M11.45 12.8473C10.2728 13.789 8.77961 14.352 7.15488 14.352C3.3545 14.352 0.273682 11.2712 0.273682 7.47085C0.273682 3.67048 3.3545 0.589661 7.15488 0.589661C10.9553 0.589661 14.0361 3.67048 14.0361 7.47085C14.0361 9.09559 13.473 10.5888 12.5313 11.766L16.8704 16.1051C17.169 16.4037 17.169 16.8878 16.8704 17.1864C16.5719 17.485 16.0878 17.485 15.7892 17.1864L11.45 12.8473ZM12.5069 7.47085C12.5069 10.4267 10.1107 12.8229 7.15488 12.8229C4.19903 12.8229 1.80284 10.4267 1.80284 7.47085C1.80284 4.51501 4.19903 2.11881 7.15488 2.11881C10.1107 2.11881 12.5069 4.51501 12.5069 7.47085Z" fill="#2B384A" />
+										</svg>
+									</button>
+									<input type="text" placeholder="Курсы" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<!-- // HEADER -->
