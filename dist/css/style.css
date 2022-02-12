@@ -239,7 +239,7 @@ a {
           flex-direction: column; }
 
 .main {
-  margin-top: 115px;
+  margin-top: 126px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
@@ -742,7 +742,7 @@ h2 {
   .main-search {
     height: 35px;
     padding: 0 12px; }
-  .main-fav:not(.info-product__fav) {
+  .main-fav:not(.info-product__fav):not(.card-lk-link__fav) {
     width: 35px;
     height: 35px; }
   .main-account {
@@ -789,7 +789,7 @@ h2 {
   .main-search {
     height: 30px;
     width: 30px; }
-  .main-fav:not(.info-product__fav) {
+  .main-fav:not(.info-product__fav):not(.card-lk-link__fav) {
     width: 30px;
     height: 30px; }
   .main-account {
@@ -2010,8 +2010,14 @@ h2 {
     width: 30px;
     height: 30px; } }
 
+.lk-info__wrap {
+  padding: 70px 0 150px 0; }
+
 .lk-info__person {
   margin-bottom: 30px; }
+
+.lk-info__block-link {
+  margin-bottom: 95px; }
 
 .person-info__group {
   display: -webkit-box;
@@ -2077,6 +2083,7 @@ h2 {
   color: var(--main-color-text); }
 
 .person-info__scores-name {
+  margin-bottom: 5px;
   text-align: right;
   font-weight: 500;
   font-size: 14px;
@@ -2096,13 +2103,22 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
 
 .person-info__email {
   position: relative;
-  margin-right: 80px; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 80px;
+  margin-bottom: 20px; }
   .person-info__email::before {
     content: "";
     position: absolute;
@@ -2113,6 +2129,7 @@ h2 {
     background: #ccd2e3; }
 
 .person-info__email-not-confirmed {
+  white-space: nowrap;
   margin-left: 15px;
   position: relative;
   padding: 6px 20px;
@@ -2133,7 +2150,8 @@ h2 {
 
 .person-info__phone {
   position: relative;
-  margin-right: 80px; }
+  margin-right: 80px;
+  margin-bottom: 20px; }
   .person-info__phone::before {
     content: "";
     position: absolute;
@@ -2145,7 +2163,8 @@ h2 {
 
 .person-info__address {
   position: relative;
-  padding-left: 35px; }
+  padding-left: 35px;
+  margin-bottom: 20px; }
   .person-info__address::before {
     content: "";
     position: absolute;
@@ -2243,6 +2262,261 @@ h2 {
     background: linear-gradient(112.57deg, #44a7ef 2.94%, #aeecff 100%); }
     .card-lk-link:hover .card-lk-link__name {
       color: #fff; }
+
+.lk-progress__name {
+  margin-bottom: 30px;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  color: var(--main-color-text); }
+
+.lk-progress__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; }
+
+.card-course-progress {
+  padding: 25px;
+  background: rgba(187, 222, 241, 0.1);
+  border-radius: 8px; }
+  .card-course-progress__group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 10px; }
+  .card-course-progress__group-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 20px; }
+  .card-course-progress__number {
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #26B1FF; }
+  .card-course-progress__name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: var(--main-color-text); }
+  .card-course-progress__count {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #A3A0B2; }
+  .card-course-progress__text {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 120%;
+    color: #A3A0B2; }
+
+.progress-range {
+  position: relative;
+  height: 38px;
+  width: 100%; }
+  .progress-range__min {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 41px;
+    z-index: 1; }
+    .progress-range__min.--img {
+      bottom: -12px;
+      height: 50px; }
+      .progress-range__min.--img .progress-range__point-dot {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        width: 27px;
+        height: 27px;
+        border-radius: 50%;
+        background: #FFFFFF;
+        -webkit-box-shadow: 0px 0px 12px -2px rgba(141, 147, 156, 0.2);
+                box-shadow: 0px 0px 12px -2px rgba(141, 147, 156, 0.2); }
+  .progress-range__current {
+    position: absolute;
+    bottom: -5px;
+    height: 41px;
+    z-index: 1; }
+    .progress-range__current .progress-range__point-dot {
+      width: 12px;
+      height: 12px;
+      border: 1px solid #fff; }
+    .progress-range__current.--img {
+      bottom: -12px;
+      height: 50px; }
+      .progress-range__current.--img .progress-range__point-dot {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        width: 27px;
+        height: 27px;
+        border-radius: 50%;
+        background: #FFFFFF;
+        -webkit-box-shadow: 0px 0px 12px -2px rgba(141, 147, 156, 0.2);
+                box-shadow: 0px 0px 12px -2px rgba(141, 147, 156, 0.2); }
+  .progress-range__max {
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    height: 41px;
+    z-index: 1; }
+    .progress-range__max.--img {
+      bottom: -12px;
+      height: 50px; }
+      .progress-range__max.--img .progress-range__point-dot {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        width: 27px;
+        height: 27px;
+        border-radius: 50%;
+        background: #FFFFFF;
+        -webkit-box-shadow: 0px 0px 12px -2px rgba(141, 147, 156, 0.2);
+                box-shadow: 0px 0px 12px -2px rgba(141, 147, 156, 0.2); }
+  .progress-range__point {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: 100%; }
+  .progress-range__point-value {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); }
+  .progress-range__point-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #26B1FF; }
+  .progress-range__bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #CCD2E3; }
+  .progress-range__bar-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #26B1FF; }
+
+@media (max-width: 1300px) {
+  .person-info__name {
+    font-size: calc(20px + 10 * ((100vw - 320px) / 980)); }
+  .person-info__scores-value {
+    font-size: calc(16px + 10 * ((100vw - 320px) / 980)); }
+    .person-info__scores-value span {
+      font-size: calc(26px + 14 * ((100vw - 320px) / 980)); }
+  .lk-block-link__list {
+    grid-template-columns: 1fr 1fr 1fr; }
+  .card-lk-link__name {
+    font-size: calc(16px + 2 * ((100vw - 320px) / 980)); }
+  .lk-progress__name {
+    font-size: calc(20px + 4 * ((100vw - 320px) / 980)); }
+  .card-course-progress__number {
+    font-size: calc(26px + 14 * ((100vw - 320px) / 980)); }
+  .card-course-progress__name {
+    font-size: calc(12px + 4 * ((100vw - 320px) / 980)); }
+  .card-course-progress__count {
+    font-size: calc(12px + 4 * ((100vw - 320px) / 980)); }
+  .card-course-progress__text {
+    font-size: calc(12px + 2 * ((100vw - 320px) / 980)); }
+  .progress-range__point-value {
+    font-size: calc(14px + 2 * ((100vw - 320px) / 980)); } }
+
+@media (max-width: 1170px) {
+  .lk-info__wrap {
+    padding: 10px 0 50px 0; }
+  .lk-info__block-link {
+    margin-bottom: 40px; }
+  .person-info__email {
+    margin-right: 40px; }
+    .person-info__email::before {
+      right: -20px; }
+  .person-info__phone {
+    margin-right: 40px; }
+    .person-info__phone::before {
+      right: -20px; }
+  .person-info__email-not-confirmed {
+    font-size: 12px; }
+  .card-course-progress {
+    padding: 15px; } }
+
+@media (max-width: 768px) {
+  .person-info__group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .person-info__avatar {
+    margin-right: 0;
+    margin-bottom: 15px; }
+  .person-info__email-not-confirmed {
+    padding: 6px 13px; }
+    .person-info__email-not-confirmed span {
+      display: none; }
+  .lk-block-link__list {
+    grid-template-columns: 1fr; }
+  .card-lk-link {
+    height: 150px; }
+  .lk-progress__list {
+    grid-template-columns: 1fr; } }
+
+@media (max-width: 500px) {
+  .person-info__top {
+    margin-bottom: 10px; }
+  .person-info__middle {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 5px; }
+  .person-info__name {
+    margin-right: 20px;
+    margin-bottom: 10px; }
+  .person-info__scores {
+    margin-bottom: 10px; }
+  .person-info__scores-name {
+    text-align: left;
+    margin-bottom: 10px; } }
 
 .footer {
   margin-top: 40px; }

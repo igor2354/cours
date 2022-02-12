@@ -317,7 +317,7 @@
 	}
 
 	.main-fav {
-		&:not(.info-product__fav) {
+		&:not(.info-product__fav):not(.card-lk-link__fav) {
 			width: 35px;
 			height: 35px;
 		}
@@ -401,7 +401,7 @@
 	}
 
 	.main-fav {
-		&:not(.info-product__fav) {
+		&:not(.info-product__fav):not(.card-lk-link__fav)  {
 			width: 30px;
 			height: 30px;
 		}

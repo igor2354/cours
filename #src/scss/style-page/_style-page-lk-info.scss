@@ -1,9 +1,14 @@
 .lk-info {
 	&__wrap {
+		padding: 70px 0 150px 0;
 	}
 
 	&__person {
 		margin-bottom: 30px;
+	}
+
+	&__block-link {
+		margin-bottom: 95px;
 	}
 }
 
@@ -74,6 +79,7 @@
 	}
 
 	&__scores-name {
+		margin-bottom: 5px;
 		text-align: right;
 		font-weight: 500;
 		font-size: 14px;
@@ -94,12 +100,16 @@
 
 	&__bottom {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 	}
 
 	&__email {
 		position: relative;
+		display: flex;
+		align-items: center;
 		margin-right: 80px;
+		margin-bottom: 20px;
 
 		&::before {
 			content: "";
@@ -116,6 +126,7 @@
 	}
 
 	&__email-not-confirmed {
+		white-space: nowrap;
 		margin-left: 15px;
 		position: relative;
 		padding: 6px 20px;
@@ -139,6 +150,7 @@
 	&__phone {
 		position: relative;
 		margin-right: 80px;
+		margin-bottom: 20px;
 
 		&::before {
 			content: "";
@@ -154,6 +166,7 @@
 	&__address {
 		position: relative;
 		padding-left: 35px;
+		margin-bottom: 20px;
 		&::before {
 			content: "";
 			position: absolute;
@@ -210,6 +223,7 @@
 	&__item {
 	}
 }
+
 .card-lk-link {
 	position: relative;
 	padding: 20px 20px 30px 20px;
@@ -253,6 +267,354 @@
 		background: linear-gradient(112.57deg, #44a7ef 2.94%, #aeecff 100%);
 		& .card-lk-link__name {
 			color: #fff;
+		}
+	}
+}
+
+.lk-progress {
+
+	&__name {
+		margin-bottom: 30px;
+		font-size: 24px;
+		line-height: 120%;	
+		letter-spacing: -0.03em;
+		color: var(--main-color-text);
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+	}
+
+	&__item {
+	}
+}
+
+.card-course-progress {
+	padding: 25px ;
+	background: rgba(187, 222, 241, 0.1);
+	border-radius: 8px;
+	&__group {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 10px;
+	}
+
+	&__group-info {
+		display: flex;
+		align-items: center;
+		margin-right: 20px;
+	}
+
+	&__number {
+		margin-right: 15px;
+		font-weight: bold;
+		font-size: 40px;
+		line-height: 120%;
+		letter-spacing: -0.03em;
+		color: #26B1FF;
+
+	}
+
+	&__name {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 120%;
+		letter-spacing: -0.03em;
+		color: var(--main-color-text);
+	}
+
+	&__count {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 120%;
+		letter-spacing: -0.03em;
+		color: #A3A0B2;
+	}
+
+	&__text {
+		margin-bottom: 10px;
+		font-size: 14px;
+		line-height: 120%;
+		color: #A3A0B2;
+	}
+
+	&__range {
+	}
+}
+
+.progress-range {
+	position: relative;
+	height: 38px;
+	width: 100%;
+	&__min {
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		height: 41px;
+		z-index: 1;	
+		&.--img {
+			bottom: -12px;
+			height: 50px;
+			& .progress-range__point-dot {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 27px;
+				height: 27px;
+				border-radius: 50%;
+				background: #FFFFFF;
+				box-shadow: 0px 0px 12px -2px rgba(141, 147, 156, 0.2);
+			}
+		}
+	}
+
+	&__current {
+		position: absolute;
+		bottom: -5px;
+		height: 41px;
+		z-index: 1;	
+		& .progress-range__point-dot {
+			width: 12px;
+			height: 12px;
+			border: 1px solid #fff;
+		}
+
+		&.--img {
+			bottom: -12px;
+			height: 50px;
+			& .progress-range__point-dot {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 27px;
+				height: 27px;
+				border-radius: 50%;
+				background: #FFFFFF;
+				box-shadow: 0px 0px 12px -2px rgba(141, 147, 156, 0.2);
+			}
+		}
+	}
+
+	&__max {
+		position: absolute;
+		right: 0;
+		bottom: -2px;
+		height: 41px;
+		z-index: 1;	
+		&.--img {
+			bottom: -12px;
+			height: 50px;
+			& .progress-range__point-dot {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 27px;
+				height: 27px;
+				border-radius: 50%;
+				background: #FFFFFF;
+				box-shadow: 0px 0px 12px -2px rgba(141, 147, 156, 0.2);
+			}
+		}
+	}
+
+	&__point {
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		height: 100%;
+	}
+
+	&__point-value {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+
+	&__point-dot {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: #26B1FF;
+	}	
+
+	&__bar {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 2px;
+		background: #CCD2E3;
+	}
+
+	&__bar-fill {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		background: #26B1FF;
+	}
+}
+
+@media (max-width: 1300px) {
+	.person-info {
+		&__name {
+			@include adaptiv-font(30, 20);
+		}
+
+		&__scores-value {
+			@include adaptiv-font(26, 16);
+			& span {
+				@include adaptiv-font(40, 26);
+			}
+		}
+	}
+
+	.lk-block-link {
+		&__list {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+
+	.card-lk-link {
+		&__name {
+			@include adaptiv-font(18, 16);
+		}
+	}
+
+	.lk-progress {
+		&__name {
+			@include adaptiv-font(24, 20);
+		}
+	}
+
+	.card-course-progress {
+		&__number {
+			@include adaptiv-font(40, 26);
+		}
+
+		&__name {
+			@include adaptiv-font(16, 12);
+		}
+
+		&__count {
+			@include adaptiv-font(16, 12);
+		}
+
+		&__text {
+			@include adaptiv-font(14, 12);
+		}
+	}
+
+	.progress-range {
+		&__point-value {
+			@include adaptiv-font(16, 14);
+		}
+	}
+}
+
+@media (max-width: 1170px) {
+	.lk-info {
+		&__wrap {
+			padding: 10px 0 50px 0;
+		}
+
+		&__block-link {
+			margin-bottom: 40px;
+		}
+	}
+
+	.person-info {
+		&__email {
+			margin-right: 40px;
+			&::before {
+				right: -20px;
+			}
+		}
+
+		&__phone {
+			margin-right: 40px;
+			&::before {
+				right: -20px;
+			}
+		}
+
+		&__address {
+
+		}
+
+		&__email-not-confirmed {
+			font-size: 12px;
+		}
+	}
+
+	.card-course-progress {
+		padding: 15px;
+	}
+}
+
+@media (max-width: 768px) {
+	.person-info {
+		&__group {
+			flex-direction: column;
+		}
+
+		&__avatar {
+			margin-right: 0;
+			margin-bottom: 15px;
+		}
+
+		&__email-not-confirmed {
+			padding: 6px 13px;
+			& span {
+				display: none;
+			}
+		}
+	}
+
+	.lk-block-link {
+		&__list {
+			grid-template-columns: 1fr ;
+		}
+	}
+
+	.card-lk-link {
+		height: 150px;
+	}
+
+	.lk-progress {
+		&__list {
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.person-info {
+		&__top {
+			margin-bottom: 10px;
+		}
+
+		&__middle {
+			flex-wrap: wrap;
+			align-items: center;
+			padding-bottom: 5px;
+		}
+
+		&__name {
+			margin-right: 20px;
+			margin-bottom: 10px;
+		}
+
+		&__scores {
+			margin-bottom: 10px;
+		}
+
+		&__scores-name {
+			text-align: left;
+			margin-bottom: 10px;
 		}
 	}
 }
