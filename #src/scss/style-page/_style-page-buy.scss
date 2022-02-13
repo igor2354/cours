@@ -1,0 +1,76 @@
+.sect-buy {
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        row-gap: 40px;
+        column-gap: 30px;
+    }
+
+    &__item {
+
+    }
+
+    &__empty {
+        margin-top: 85px;
+    }
+
+    &__image {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    &__text {
+        max-width: 185px;
+        margin: 0 auto;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        text-align: center;
+        color: #A3A0B2;
+    }
+}
+
+@media (max-width: 1300px) {
+    .sect-buy {
+        &__list {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        &__text {
+            @include adaptiv-font(16, 14);
+        }
+    }
+}
+
+@media (max-width: 1170px) {
+    .sect-buy {
+        &__list {
+            gap: 20px;
+        }
+
+        &__empty {
+            margin-top: 50px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .sect-buy {
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .sect-buy {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+    }
+}

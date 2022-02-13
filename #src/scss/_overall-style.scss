@@ -130,6 +130,10 @@ a {
 	&.--shadow {
 		box-shadow: 0px 8px 15px -3px rgba(32, 77, 140, 0.2);
 	}
+	&.--bg {
+		background: var(--main-color-text);
+		color: #fff;
+	}
 }
 
 @media (min-width: 1170px) {
@@ -137,6 +141,14 @@ a {
 		&:hover {
 			background: var(--main-color-text);
 			color: #fff;
+		}
+
+		&.--bg {
+			&:hover {
+				background: #fff;
+				color:  var(--main-color-text);
+				box-shadow: 0px 8px 15px -3px rgba(32, 77, 140, 0.2);
+			}
 		}
 	}
 }
@@ -288,4 +300,74 @@ h2 {
 	font-size: 18px;
 	font-weight: 600;
 	color: var(--main-color-text) !important;
+}
+
+.input-file {
+	cursor: pointer;
+	& input {
+		display: none;
+	}
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 40px;
+		min-height: 40px;
+		max-width: 40px;
+		max-height: 40px;
+		border-radius: 50%;
+		background: #FFFFFF;
+		box-shadow: 0px 0px 15px -3px rgba(141, 147, 156, 0.2);
+		transition: all 0.3s ease;
+		& svg {
+			& path {
+				transition: all 0.3s ease;
+			}
+		}
+	}
+}
+
+@media (min-width: 1170px) {
+	.input-file {
+		&:hover {
+			& .input-file__icon {
+				background: var(--main-color-text);
+				& svg {
+					& path {
+						fill: #fff;
+					}
+				}	
+			}
+		}
+	}
+}
+
+.card-banner {
+	text-align: center;
+	padding: 7px 12px;
+	font-size: 14px;
+	line-height: 120%;
+	border-radius: 30px;
+	&.--banner-one {
+		background: #FFF4E9;
+		color: #FFA826;
+	}
+
+	&.--banner-two {
+		background: #E9F7FF;
+		color: #26B1FF;
+	}
+
+	&.--banner-three {
+		background: #FEF4F0;
+		color: #B65D31;
+	}
+}
+
+@media (max-width: 1170px) {
+	.card-banner {
+		font-size: 12px;
+		padding: 5px 8px;
+	}
 }

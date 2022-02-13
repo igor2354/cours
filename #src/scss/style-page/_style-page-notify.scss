@@ -1,0 +1,227 @@
+.sect-notify {
+
+    &__title {
+        margin-bottom: 35px;
+    }
+
+    &__tab {
+    }
+
+    &__tab-controls {
+        display: flex;
+        border-bottom: 1px solid #CCD2E3;
+        margin-bottom: 20px;
+    }
+
+    &__tab-button {
+        cursor: pointer;
+        position: relative;
+        padding-bottom: 15px;
+        font-weight: 600;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 2px;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+        &.active {  
+            &::before {
+                background: #26B1FF;
+            }
+        }
+        &:hover {
+            &::before {
+                background: #26B1FF;
+            }
+        }
+    }
+
+    &__tab-content {
+    }
+
+    &__tab-item {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+
+    &__card {
+    }
+
+    &__list-promote {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+        grid-auto-rows: 1fr;
+    }
+
+    &__promote {
+    }
+
+    &__content-empty {
+        margin-top: 90px;
+        text-align: center;
+    }
+
+    &__content-empty-image {
+        margin-bottom: 20px;
+    }
+
+    &__content-empty-text {
+        font-weight: 500;
+        line-height: 120%;
+        color: #A3A0B2;
+    }
+}
+
+.card-notify {
+    display: flex;
+    padding: 35px 40px 40px 0;
+    border-bottom: 1px solid #CCD2E3;
+    &__iamge {
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+
+    &__group {
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    &__text {
+        margin-bottom: 40px;
+        letter-spacing: -0.03em;
+        opacity: 0.4;
+    }
+
+    &__date {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 120%;
+        color: #A3A0B2;
+    }
+}
+
+.card-promote {
+    position: relative;
+    padding: 25px;
+    min-height: 210px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(294.79deg, #162232 0%, #447EFF 54.69%, #01EFFF 100%);
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        position: relative;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 120%;
+        letter-spacing: -0.03em;
+        color: #FFFFFF;
+        z-index: 2;
+    }
+
+    &__text {
+        position: relative;
+        font-weight: bold;
+        font-size: 60px;
+        line-height: 140%;
+        letter-spacing: -0.03em;
+        color: #FFFFFF;
+        z-index: 2;
+    }
+
+    &__code {
+        position: relative;
+        font-weight: bold;
+        color: #FFFFFF;
+        z-index: 2;
+    }
+}
+
+@media (max-width: 1300px) {
+    .sect-notify {
+        &__list-promote {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .card-promote {
+        &__title {
+            @include adaptiv-font(22, 18);
+        }
+
+        &__text {
+            @include adaptiv-font(60, 40);
+        }
+    }
+}
+
+@media (max-width: 1170px) {
+    .sect-notify {
+        &__content-empty {
+            margin-top: 50px;
+        }
+    }
+
+    .card-notify {
+        padding: 15px 0px 15px 0;
+
+        &__text {
+            margin-bottom: 20px;
+        }
+
+        &__date {
+            font-size: 12px;
+        }
+    }
+
+    .card-promote {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .sect-notify {
+        &__list-promote {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .card-promote {
+        min-height: 150px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .sect-notify {
+        &__list-promote {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+

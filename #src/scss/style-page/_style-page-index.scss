@@ -42,7 +42,7 @@
 
 .card-main-screen {
 	position: relative;
-	padding: 150px 80px 80px 80px;
+	padding: 150px 80px 150px 80px;
 	border-radius: 60px;
 	overflow: hidden;
 	&__image {
@@ -84,6 +84,7 @@
 	}
 
 	&__rating {
+		display: none;
 		margin-bottom: 70px;
 	}
 
@@ -293,21 +294,38 @@
 		}
 	}
 
-	&__group-add {
+	&__group-top {
 		position: absolute;
 		top: 0;
 		right: 0;
+		width: 100%;
 		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	&__group-add {
+		margin-bottom: 10px;
+		margin-left: 10px;
+		flex-grow: 1;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__banner {
+		margin-bottom: 10px;
 	}
 
 	&__fav {
-		margin-right: 10px;
 	}
 
 	&__basket {
+		margin-left: 10px;
 	}
 
 	&__rating {
+		display: none;
 		padding-bottom: 20px;
 		margin-bottom: 25px;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.4);

@@ -1,0 +1,78 @@
+@@include("../components/_header.html", {"className": ""})
+
+<main class="main">
+    <div class="sect-navigation">
+        <div class="container-big">
+            <div class="sect-navigation__row">
+                <div class="sect-navigation__column">
+                    <div class="sect-navigation__title title-h2">Страницы</div>
+
+                    <div class="sect-navigation__list">
+                        <div class="sect-navigation__item">
+                            <a href="./index.html"> Главная</a>
+                        </div>
+
+                        <div class="sect-navigation__item">
+                            <a href="./page-course.html">Курс</a>
+                        </div>
+
+                        <div class="sect-navigation__item">
+                            <a href="./page-lk-info.html">Личный кабинет</a>
+                        </div>
+
+                        <div class="sect-navigation__item">
+                            <a href="./page-buy.html">Покупки</a>
+                        </div>
+
+                        <div class="sect-navigation__item">
+                            <a href="./page-fav.html">Избранное</a>
+                        </div>
+
+                        <div class="sect-navigation__item">
+                            <a href="./page-fav-empty.html">Избранное пусто</a>
+                        </div>
+
+                        <div class="sect-navigation__item">
+                            <a href="./page-notify.html">Уведомления и акции</a>
+                        </div>
+
+                        <div class="sect-navigation__item">
+                            <a href="./page-notify-empty.html">Уведомления и акции пусто</a>
+                        </div>
+
+                        <div class="sect-navigation__item">
+                            <a href="./page-support.html">Помощь</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sect-navigation__column">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<style>
+    .sect-navigation {
+        padding: 80px 0;
+    }
+
+    .sect-navigation__title {
+        margin-bottom: 30px;
+    }
+
+    .sect-navigation__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    .sect-navigation__list {
+        display: grid;
+        gap: 15px;
+    }
+</style>
+
+@@include("../components/_footer.html")

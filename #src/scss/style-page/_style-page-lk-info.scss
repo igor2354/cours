@@ -1,3 +1,14 @@
+body {
+	&.--page-support {
+		background: rgba(38, 177, 255, 0.05);
+		& .lk-info {
+			&__wrap {
+				padding: 70px 0 20px 0;
+			}
+		}
+	}
+}	
+
 .lk-info {
 	&__wrap {
 		padding: 70px 0 150px 0;
@@ -516,6 +527,16 @@
 }
 
 @media (max-width: 1170px) {
+	body {
+		&.--page-support {
+			& .lk-info {
+				&__wrap {
+					padding: 10px 0 20px 0;
+				}
+			}
+		}
+	}	
+
 	.lk-info {
 		&__wrap {
 			padding: 10px 0 50px 0;
