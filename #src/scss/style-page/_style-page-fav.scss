@@ -32,6 +32,12 @@
         text-align: center;
         color: #A3A0B2;
     }
+
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
 }
 
 @media (max-width: 1300px) {
@@ -53,6 +59,10 @@
         }
 
         &__empty {
+            margin-top: 50px;
+        }
+
+        &__pagination {
             margin-top: 50px;
         }
     }
